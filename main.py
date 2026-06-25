@@ -15,15 +15,15 @@ if os.path.exists("config.json"):
 else:
     params = {
         "secret_key": os.getenv("SECRET_KEY"),
-        "gmail-user": os.getenv("MAIL_USERNAME"),
-        "gmail-password": os.getenv("MAIL_PASSWORD"),
+        "gmail-user": os.getenv("gmail-user"),
+        "gmail-password": os.getenv("gmail-password"),
         "admin_username": os.getenv("ADMIN_USERNAME"),
         "admin_password": os.getenv("ADMIN_PASSWORD"),
         "local_url": os.getenv("DATABASE_URL"),
         "prod_url": os.getenv("DATABASE_URL"),
         "upload_location": "static/assets/img",
 
-        "no_of_posts": 3,
+        "no_of_posts": 5,
 
         "tw_url": "#",
         "fb_url": "#",
@@ -38,8 +38,12 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
+    MAIL_USE_SSL=False,
     MAIL_USERNAME=params['gmail-user'],
-    MAIL_PASSWORD=params['gmail-password']
+    MAIL_PASSWORD=params['gmail-password'],
+    MAIL_DEFAULT_SENDER=params['gmail-user'],
+    MAIL_MAX_EMAILS=1
+)
 )
 mail = Mail(app)
 if local_server:
