@@ -271,12 +271,20 @@ def contact():
 
         db.session.add(entry)
         db.session.commit()
-        mail.send_message('New Message From '+ name,
-                  sender=params['gmail-user'],
-                  recipients=[params['gmail-user']],
-                  body= message +"\n"+phone)
-        flash("Thanks for contacting us,We will get back to you","success")
-    return render_template('contact.html',params=params)
+        db.session.add(entry)
+db.session.commit()
+try:
+    mail.send_message(
+        'New Message From ' + name,
+        sender=params['gmail-user'],
+        recipients=[params['gmail-user']],
+        body=message + "\n" + phone
+    )
+except Exception as e:
+    print(e)
+
+flash("Thanks for contacting us!", "success")
+return redirect("/contact")
 
 
 if __name__ == '__main__':
