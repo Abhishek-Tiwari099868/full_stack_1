@@ -44,7 +44,6 @@ app.config.update(
     MAIL_DEFAULT_SENDER=params['gmail-user'],
     MAIL_MAX_EMAILS=1
 )
-)
 mail = Mail(app)
 if local_server:
       app.config["SQLALCHEMY_DATABASE_URI"] = params['local_url']
