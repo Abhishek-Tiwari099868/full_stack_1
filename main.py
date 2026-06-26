@@ -15,19 +15,24 @@ if os.path.exists("config.json"):
 else:
     params = {
         "secret_key": os.getenv("SECRET_KEY"),
-        "gmail-user": os.getenv("gmail-user"),
-        "gmail-password": os.getenv("gmail-password"),
+        "gmail-user": os.getenv("MAIL_USERNAME"),
+        "gmail-password": os.getenv("MAIL_PASSWORD"),
         "admin_username": os.getenv("ADMIN_USERNAME"),
         "admin_password": os.getenv("ADMIN_PASSWORD"),
         "local_url": os.getenv("DATABASE_URL"),
         "prod_url": os.getenv("DATABASE_URL"),
+
         "upload_location": "static/assets/img",
 
         "no_of_posts": 5,
 
-        "tw_url": "#",
-        "fb_url": "#",
-        "gh_url": "#"
+        "fb_url": "https://facebook.com/thebloglibrary2",
+        "gh_url": "https://github.com/thebloglibrary2",
+        "tw_url": "https://twitter.com/thebloglibrary2",
+
+        "About_text": "Hello my name is Abhishek Tiwari! I have created a blog posting website. I hope you enjoy reading and sharing knowledge.",
+        "About_text1": "The Blog Library is a platform where I share articles, tutorials, programming knowledge, and technology insights to help learners and developers.",
+        "About_text2": "My goal is to create valuable content that makes learning technology easier and more accessible for everyone."
     }
 
 local_server = os.path.exists("config.json")
