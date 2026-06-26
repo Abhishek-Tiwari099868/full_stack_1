@@ -24,7 +24,7 @@ else:
 
         "upload_location": "static/assets/img",
 
-        "no_of_posts": 5,
+        "no_of_posts": 3,
 
         "fb_url": "https://facebook.com/thebloglibrary2",
         "gh_url": "https://github.com/thebloglibrary2",
