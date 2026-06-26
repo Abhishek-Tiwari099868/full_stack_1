@@ -10795,4 +10795,39 @@ header.masthead .post-heading .meta a {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
   }
+  
+/* ===== Database Posts ===== */
+
+.post-preview{
+    margin-bottom: 40px;
+}
+
+.post-preview .post-title{
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #212529;
+    transition: .3s;
+}
+
+.post-preview .post-title:hover{
+    color: #0085A1;
+}
+
+.post-preview .post-subtitle{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #555;
+    margin-top: 5px;
+}
+
+.post-preview p{
+    line-height: 1.8;
+    color: #555;
+}
+
+.post-meta{
+    font-size: 15px;
+    color: #6c757d;
+    font-style: italic;
+}
 }
