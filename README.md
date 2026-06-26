@@ -3,7 +3,7 @@
 A full-stack blog platform built with Python Flask and MySQL.
 
 ## 🔗 Live Demo
-👉 [View Live](https://your-render-link.com)
+👉 [View Live](https://bloglibrary-mibr.onrender.com)
 
 ## ✨ Features
 - Admin authentication with session management
