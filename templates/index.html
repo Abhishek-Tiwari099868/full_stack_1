@@ -52,41 +52,35 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
-                     {% for post in posts %}
-                    </a></li>
-                
+                    {% for post in posts %}
+                    
                     <div class="post-preview">
-                        <a href="post/{{post.slug}}">
-                            <h2 class="post-title">{{ post.Title }}.</h2>
+                    
+                        <a href="{{ url_for('post_route', post_slug=post.slug) }}">
+                            <h2 class="post-title">
+                                {{ post.Title }}
+                            </h2>
+                    
                             <h3 class="post-subtitle">
-                                {{post.tagline}}
+                                {{ post.tagline }}
                             </h3>
                         </a>
+                    
                         <p class="post-meta">
                             Posted by
-                            <a href="#!">Admin</a>
-                            on {{ post.date }}, 2023
+                            <a href="#">Admin</a>
+                            on {{ post.date }}
                         </p>
+                    
+                        <p class="mt-3">
+                            {{ post.content[:180] }}{% if post.content|length > 180 %}...{% endif %}
+                        </p>
+                    
                     </div>
-                    {{post.content[0:300]}}
-                </li></a>
-                    <!-- Divider-->
-                    <hr class="my-4" />
+                    
+                    <hr class="my-4">
+
                     {% endfor %}
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                    <a href="{{ url_for('post') }}">
-                        <h2 class="post-title">Failure is not an option</h2>
-                        <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                    </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
                     <!-- Pager-->
                     <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase"
                         href="{{url_for('older_posts')}}">
