@@ -14,7 +14,7 @@
   "About_text2":" My goal is to create valuable content that makes learning technology easier and more accessible for everyone." ,
   "no_of_posts": 5,
   "login_img":"login.jpg",
-  "admin_username":"Abhishek",
+  "admin_username":"YOUR_ADMIN_USERNAME",
   "admin_password":"YOUR_ADMIN_PASSWORD",
   "secret_key":"YOUR_SECRET_KEY",
   "upload_location":"static/assets/img"
